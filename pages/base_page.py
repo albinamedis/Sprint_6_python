@@ -36,6 +36,12 @@ class BasePage:
         element = self.find_element_with_wait(locator)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
 
+    def open_new_tab(self):
+        # Получаем дескрипторы всех окон
+        window_handles = self.driver.window_handles
+        # Переключаемся на новую вкладку (последняя добавленная)
+        self.driver.switch_to.window(window_handles[-1])
+
     # # метод перетаскивания элемента для диплома
     # def my_drag_and_drop(self, locator_from,locator_to):
     #     elem_from = self.find_element_with_wait(locator_from)

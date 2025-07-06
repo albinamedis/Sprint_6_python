@@ -7,9 +7,6 @@ from pages.base_page import BasePage
 
 class ZakazPage(BasePage):
 
-    def __init__(self, driver):
-        self.driver = driver
-
     @allure.step("Заполнение формы об арендателе")
     def set_data_who(self, data):
         self.click_to_element(OrderPageLocators.NAME)

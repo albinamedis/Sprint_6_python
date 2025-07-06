@@ -7,9 +7,6 @@ from locators.main_page_locators import MainPageLocators
 import allure 
 
 class MainPage(BasePage):
-
-    def __init__(self, driver):
-        self.driver = driver
     
     @allure.step('Нажать на вопрос')
     def click_to_question(self, num):
